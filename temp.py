@@ -132,7 +132,7 @@ class TempMailBot:
         self.scheduler.add_job(
             EmailHandler.check_emails,
             'interval',
-            seconds=int(os.getenv("CHECK_INTERVAL", 120)),
+            seconds=int(os.getenv("CHECK_INTERVAL", 30)),
             args=[self.app]
         )
 
